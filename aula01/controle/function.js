@@ -5,7 +5,22 @@ $(document).ready(function(){
     $('.btn-send').click(function(e){
         e.preventDefault()
 
-    alert('Voce clicou no botao enviar!!')
+   
+        //coletar as informaçoes digitadas / selecionadas no formulario 
+        let dados = $('#form').serialize()
+
+        $.ajax({
+
+            type: 'POST' ,
+            dataType: 'JSON',
+            assync: true,
+            data: dados,
+            url: '../modelo/retorno.php',
+            success: function(){
+
+            }
+
+        })
 
     })
 })
