@@ -1,34 +1,34 @@
 <?php
-$nome = $_REQUEST['nome'];
-$animal = $_REQUEST['animal'];
+$NOME = $_REQUEST['nome'];
+$ANIMAL = $_REQUEST['animal'];
 
-if (empty($nome)){
+if (empty($NOME)){
 
-  $dados = array(
+  $DADOS = array(
     "tipo" => 'error'
     "mensagem" -> 'Existem(m) campos obrigatorios(s) nao preenchidos(s) .'
 )
 
 }   else {
 
-        switch($animal){
-            case '1' : $dados = array(
+        switch($ANIMAL){
+            case '1' : $DADOS = array(
               "tipo" -> 'rotw.jpg' ,
-              "mensagem" => 'Ola  '. $nome. ' ,  sabemos que seu animal preferido é o cachorro '   
+              "mensagem" => 'Ola  '. $NOME. ' ,  sabemos que seu animal preferido é o cachorro '   
             );
        break;
-       case '2' : $dados = array(
+       case '2' : $DADOS = array(
               "tipo" -> 'gato.jpg' ,
-              "mensagem" => 'Ola  '. $nome. ' ,  sabemos que seu animal preferido é o gato '   
+              "mensagem" => 'Ola  '. $NOME. ' ,  sabemos que seu animal preferido é o gato '   
             );
         break;
-        case '3' : $dados = array(
+        case '3' : $DADOS = array(
               "tipo" -> 'pei.jpg' ,
-              "mensagem" => 'Ola  '. $nome. ' ,  sabemos que seu animal preferido é o peixe '   
+              "mensagem" => 'Ola  '. $NOME. ' ,  sabemos que seu animal preferido é o peixe '   
             );
         
         }
 
 } 
 
-echo json_encode($dados);
+echo json_encode($DADOS);
